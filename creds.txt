@@ -1,0 +1,8 @@
+////prisma setup //////
+npm init -y
+npm install prisma --save-dev
+npx prisma
+npx prisma init
+npm install @prisma/client
+npx prisma generate
+mongodb+srv://khan1234:u5Nmmp9LxYLGtIyJ@cluster0.3lnug.mongodb.net/<database_name>?retryWrites=true&w=majority&appName=Cluster0
