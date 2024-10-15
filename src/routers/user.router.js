@@ -1,5 +1,5 @@
 import { Router } from "express"
-import {changePassword, login, logout, profileDelete, profileUpdate, signup, users} from "../controllers/user.controller.js"
+import {changePassword, login, logout, profileDelete, profileUpdate, sendEmailToUser, signup, users} from "../controllers/user.controller.js"
 import {verifyToken} from "../middleware/isLoggedIn.js"
 const router= Router()
 
@@ -10,6 +10,7 @@ router.route("/profile-update").put(verifyToken,profileUpdate)
 router.route("/profile-delete").delete(verifyToken,profileDelete)
 router.route("/change-password").put(verifyToken,changePassword)
 router.route("/users").get(users)
+router.route('/sent-email').post(sendEmailToUser);
 /// forgot password is pending//
 
 export default router;
